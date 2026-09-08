@@ -6,10 +6,9 @@ The workflow itself — the pipeline order, what each stage does, and the exact 
 
 ## What's in here
 
-Nothing reimplemented. This repo sequences four external skill sources into one pipeline:
+Nothing reimplemented. This repo sequences three external skill sources into one pipeline:
 
 - [mattpocock/skills](https://github.com/mattpocock/skills) — `grill-with-docs`, `grilling`, `domain-modeling`, `to-spec`, `to-tickets`, `implement`, `code-review` — the idea → ship spine.
-- [BuilderIO/skills](https://github.com/BuilderIO/skills) — `visual-plan`, `visual-recap` — human-approval checkpoints before implementation and before review.
 - [cursor/plugins](https://github.com/cursor/plugins) (`unslop`) — strips AI-slop phrasing from generated prose.
 - [AmirAbaris/mapping-external-data-to-domain-models](https://github.com/AmirAbaris/mapping-external-data-to-domain-models) — the DTO → domain mapping pattern this workflow applies during implementation.
 
