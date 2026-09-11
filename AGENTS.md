@@ -1,18 +1,10 @@
 # Workflow
 
-This file is the standard operating procedure for coding agents in this project. It defines a single idea → ship pipeline built from external, versioned skills — we don't reimplement them here, we install and sequence them.
+This file is the standard operating procedure for coding agents in this project. It sequences external, versioned skills into a single idea → ship pipeline — we don't reimplement them here, we invoke them in order. The skills themselves must already be installed (see the repo README for install commands); this file only tells agents when to reach for each one.
 
 Copy this file (or symlink it) into every project that should follow the same workflow.
 
-## Install
-
-```bash
-npx skills@latest add mattpocock/skills
-npx skills add https://github.com/cursor/plugins --skill unslop
-npx skills add AmirAbaris/mapping-external-data-to-domain-models
-```
-
-The first command installs the whole `mattpocock/skills` repo, which is where `grill-with-docs`, `grilling`, `domain-modeling`, `to-spec`, `to-tickets`, `implement`, and `code-review` all live. `grill-with-docs` is a one-line delegator — it does nothing without `grilling` and `domain-modeling`, which is why they're installed alongside it rather than left out.
+`grill-with-docs` is a one-line delegator — it does nothing without `grilling` and `domain-modeling`, so all three must be installed together.
 
 ## The spine
 

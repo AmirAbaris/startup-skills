@@ -2,7 +2,7 @@
 
 My go-to coding-agent workflow, assembled from other people's skills rather than written from scratch. Open source so it's easy to drop into any project and easy to fork.
 
-The workflow itself — the pipeline order, what each stage does, and the exact install commands — lives in [AGENTS.md](./AGENTS.md). That's the file to copy into a project.
+The workflow itself — the pipeline order and what each stage does — lives in [AGENTS.md](./AGENTS.md). That's the file to copy into a project so agents there know when to reach for each skill; it assumes the skills are already installed.
 
 ## What's in here
 
@@ -15,7 +15,9 @@ Nothing reimplemented. This repo sequences three external skill sources into one
 ## Use it in a project
 
 ```bash
+npx skills@latest add mattpocock/skills --skill grill-with-docs grilling domain-modeling to-spec to-tickets implement code-review
+npx skills add https://github.com/cursor/plugins --skill unslop
+npx skills add AmirAbaris/mapping-external-data-to-domain-models
+
 cp AGENTS.md /path/to/project/AGENTS.md
-cd /path/to/project
-# then run the install commands at the top of AGENTS.md
 ```
